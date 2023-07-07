@@ -5,9 +5,107 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    tools:context=".MainActivity">
+    tools:context="FitEasy.MainActivity">
 
-<!--    <ProgressBar-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#18FFFF"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp">
+
+
+        <LinearLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/stepCountTextView"
+                android:layout_width="408dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="  *STEPS : "
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/accelerometerValues"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text="         Accelerometer Values: -0.17 0.59 9.76"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/accelerometerValues"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/magnitudeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="Magnitude:"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/stepProgressBar"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:max="500"
+                    android:progress="0" /><!--set 100 maximum value for the progress bar-->
+            </LinearLayout>
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/magnitudeTextView"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@id/accelerometerValues"-->
+            <!--                android:background="#FF9800"-->
+            <!--                android:padding="10dp"-->
+            <!--                android:textColor="@android:color/black"-->
+            <!--                android:textSize="15sp"-->
+            <!--                tools:text="Magnitude: 0.0" />-->
+
+
+            <!--            <ProgressBar-->
+            <!--                android:id="@+id/stepProgressBar"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="35dp"-->
+            <!--                android:layout_gravity="right"-->
+
+            <!--                android:max="100"-->
+            <!--                android:progress="0" />-->
+
+            <!--            -->
+            <!--            <com.example.1.0.0.ColorBar-->
+            <!--                android:id="@+id/stepColorBar"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="20dp"-->
+            <!--                app:maxValue="100"-->
+            <!--                app:currentValue="0" />-->
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    <ProgressBar-->
 <!--        android:id="@+id/prog_shakeMeter"-->
 <!--        style="?android:attr/progressBarStyleHorizontal"-->
 <!--        android:layout_width="0dp"-->
@@ -46,63 +144,4 @@
 <!--        app:layout_constraintEnd_toEndOf="parent"-->
 <!--        app:layout_constraintStart_toStartOf="parent"-->
 <!--        app:layout_constraintTop_toBottomOf="@+id/txt_prevAccel" />-->
-
-    <LinearLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-<!--        android:layout_above="@id/musicToolbar"-->
-<!--        android:layout_below="@id/actionToolbar"-->
-<!--        android:orientation="vertical" >-->
-
-    <TextView
-        android:id="@+id/stepCountTextView"
-        android:layout_width="408dp"
-        android:layout_height="35dp"
-        android:layout_gravity="center"
-
-        android:gravity="center"
-        android:text="  *STEPS : "
-
-        android:textSize="15sp"
-        android:textStyle="bold" />
-
-
-    <TextView
-        android:id="@+id/accelerometerValues"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-
-        android:gravity="center_vertical"
-        android:text="         Accelerometer Values: -0.1759738177061081 0.5907692909240723 9.761159896850586"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/accelerometerValues"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/magnitudeTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-
-            android:padding="10dp"
-            android:textSize="17sp"
-            android:text="Magnitude:"
-            android:textStyle="bold"/>
-
-        <ProgressBar
-            android:id="@+id/stepProgressBar"
-            android:layout_width="fill_parent"
-            android:layout_height="30dp"
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-            android:progress="0"
-            android:max="100" /><!--set 100 maximum value for the progress bar-->
-         </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
 
