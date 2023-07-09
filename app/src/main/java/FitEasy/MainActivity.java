@@ -317,7 +317,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                         System.out.println("Progress : "+ progress[0]);
                         //progressBar.setVisibility(View.VISIBLE);
                         Handler mHandler = new Handler();
-                        stepProgressBar.setMax(100);
+                        stepProgressBar.setMax(500);
                         stepProgressBar.setProgress(progress[0]);
 
 
